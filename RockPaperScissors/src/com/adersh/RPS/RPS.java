@@ -25,6 +25,10 @@ public class RPS {
 
 		char choice = inp.next().charAt(0);
 		String usrChoice = getChoice(choice);
+		if (usrChoice.equals("Wrong Choice")) {
+			System.out.println("Enter a valid input!!");
+			continue;
+		}
 		Random r = new Random();
 		String cmpChoice = rps[r.nextInt(3)];
 		play(usrChoice, cmpChoice);
